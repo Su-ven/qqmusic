@@ -1,0 +1,50 @@
+.list_box{
+	margin: 10px;
+	.title{
+		margin-bottom: 12px;
+	}
+
+	dl{
+		font-size: 0;
+		dt{
+			font-size: 16px;
+		}
+		dd{
+			box-sizing: border-box;
+			width: 50%;
+			display: inline-block;
+			margin-right: -3px;
+			font-size: 16px;
+			padding: 5px;
+			&:nth-child(even){
+				padding-left: 0;
+			}
+			&:nth-child(odd){
+				padding-right: 0;
+			}
+			.img_container{
+				position: relative;
+				.msg{
+					width: 100%;
+					color: #fff;
+					position: absolute;
+					left: 10px;
+					bottom: 10px;
+					font-size: 12px;
+
+					i{
+						width: 10px;
+						height: 10px;
+						margin-right: 5px;
+						display: inline-block;
+						background: url('https://y.gtimg.cn/mediastyle/mobile/yqq_v5/img/list_sprite.png?max_age=19830212&d=20151105145423') no-repeat 0 -50px;
+						background-size: 24px 60px;
+					}
+				}
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+}

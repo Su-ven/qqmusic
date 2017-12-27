@@ -9,6 +9,11 @@ import 'swiper/dist/css/swiper.css'
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
 
+Vue.filter('formatNum', function(value){
+	if (isNaN(value)) return
+	return value*1>=10000 ? `${Math.round(parseFloat(value)/100)/100}万` : value;
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

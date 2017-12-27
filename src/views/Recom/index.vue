@@ -1,16 +1,21 @@
 <template>
-	<div>
+	<div class="recom_box">
 		<Swiper v-if="bannerDatas.length" :datas="bannerDatas"></Swiper>
+		<div class="list_box">
+			<List v-if="songList.length" title="热门歌单" :datas="songList"></List>
+		</div>
 	</div>
 </template>
 <script>
 	import jsonp from 'api/baseJsonp'
 	import {commonParams, options} from 'api/config'
 	import Swiper from 'comps/Swiper'
+	import List from 'comps/recom/List'
 	export default {
 		data(){
 			return {
-				bannerDatas: []
+				bannerDatas: [],
+				songList: [],
 			}
 		},
 		created() {
@@ -28,12 +33,14 @@
 				.then((res) => {
 					if (res.code === 0) {
 						this.bannerDatas =  res.data.slider;
+						this.songList =  res.data.songList;
 					}
 				})
 			}
 		},
 		components: {
 			Swiper,
+			List
 		}
 	}
 </script>
