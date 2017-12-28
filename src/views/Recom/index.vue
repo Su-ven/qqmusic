@@ -5,6 +5,15 @@
 			<List v-if="radioList.length" title="电台" :datas="radioList"></List>
 			<List v-if="songList.length" title="热门歌单" :datas="songList"></List>
 		</div>
+		<div class="footer">
+			<p class="list_more"><a href="javascript:;">去客户端发现更多好音乐  &gt;</a></p>
+			<a class="go_pc" href="javascript:;">查看电脑版网页</a>
+			<p class="footer_logo"></p>
+			<p class="copyright">
+				Copyright © 1998 - <span id="js_cpright_year">2017</span> Tencent. All Rights Reserved. <br />
+				联系电话：0755-86013388 QQ群：55209235
+			</p>
+		</div>
 	</div>
 </template>
 <script>
@@ -47,3 +56,6 @@
 		}
 	}
 </script>
+<style scoped lang="less">
+	@import "./style.less";
+</style>

@@ -32,29 +32,18 @@
 			.img_container{
 				position: relative;
 				.msg{
-					display: block;
-					color: #fff;
-					position: absolute;
+					&:extend(.img_container_style all);
 					left: 10px;
-					bottom: 10px;
-					font-size: 12px;
-
-					i{
-						width: 10px;
-						height: 10px;
-						margin-right: 5px;
-						display: inline-block;
-						background: url('https://y.gtimg.cn/mediastyle/mobile/yqq_v5/img/list_sprite.png?max_age=19830212&d=20151105145423') no-repeat 0 -50px;
-						background-size: 24px 60px;
-
-						&.icon_play{
-					    background-position: 0 0;
-						}
-					}
 				}
 
 				.play_icon{
-
+					&:extend(.img_container_style all);
+					right: 0;
+					i{
+						width: 24px !important;
+						height: 24px !important;
+				    	background-position: 0 0 !important;
+					}
 				}
 
 				img{
@@ -75,5 +64,23 @@
 				padding: 5px;
 			}
 		}
+	}
+}
+
+.img_container_style{
+	display: block;
+	color: #fff;
+	position: absolute;
+	bottom: 5px;
+	font-size: 12px;
+
+	i{
+		width: 10px;
+		height: 10px;
+		margin-right: 5px;
+		display: inline-block;
+		background: url('https://y.gtimg.cn/mediastyle/mobile/yqq_v5/img/list_sprite.png?max_age=19830212&d=20151105145423') no-repeat;
+		background-position: 0 -50px;
+		background-size: 24px 60px;
 	}
 }
