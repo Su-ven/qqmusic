@@ -2,6 +2,7 @@
 	<div class="recom_box">
 		<Swiper v-if="bannerDatas.length" :datas="bannerDatas"></Swiper>
 		<div class="list_box">
+			<List v-if="radioList.length" title="电台" :datas="radioList"></List>
 			<List v-if="songList.length" title="热门歌单" :datas="songList"></List>
 		</div>
 	</div>
@@ -16,6 +17,7 @@
 			return {
 				bannerDatas: [],
 				songList: [],
+				radioList: [],
 			}
 		},
 		created() {
@@ -34,6 +36,7 @@
 					if (res.code === 0) {
 						this.bannerDatas =  res.data.slider;
 						this.songList =  res.data.songList;
+						this.radioList =  res.data.radioList;
 					}
 				})
 			}

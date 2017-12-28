@@ -16,13 +16,14 @@
 
 <style lang="less" scoped>
 	.nav ul{
+		background-color: #fff;
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
-		margin: 5px 0;
-		
+		pading: 5px 0;
+
 		li{
 			flex: 1;
 			cursor: pointer;

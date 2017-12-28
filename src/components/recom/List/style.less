@@ -6,26 +6,33 @@
 
 	dl{
 		font-size: 0;
+		overflow: hidden;
 		dt{
 			font-size: 16px;
 		}
 		dd{
-			box-sizing: border-box;
 			width: 50%;
-			display: inline-block;
-			margin-right: -3px;
+			float: left;
 			font-size: 16px;
-			padding: 5px;
+			box-sizing: border-box;
+			margin: 5px 0px;
+
+			.item_container{
+				padding: 5px;
+				background-color: #fff;
+			}
+
 			&:nth-child(even){
-				padding-left: 0;
+				padding-right: 5px;
+
 			}
 			&:nth-child(odd){
-				padding-right: 0;
+				padding-left: 5px;
 			}
 			.img_container{
 				position: relative;
 				.msg{
-					width: 100%;
+					display: block;
 					color: #fff;
 					position: absolute;
 					left: 10px;
@@ -39,11 +46,33 @@
 						display: inline-block;
 						background: url('https://y.gtimg.cn/mediastyle/mobile/yqq_v5/img/list_sprite.png?max_age=19830212&d=20151105145423') no-repeat 0 -50px;
 						background-size: 24px 60px;
+
+						&.icon_play{
+					    background-position: 0 0;
+						}
 					}
 				}
+
+				.play_icon{
+
+				}
+
 				img{
 					width: 100%;
 				}
+			}
+
+			.desc_container{
+				font-size: 14px;
+				white-space: nowrap;
+				text-overflow:ellipsis;
+				overflow: hidden;
+				padding: 5px;
+			}
+
+			.author_container{
+				font-size: 12px;
+				padding: 5px;
 			}
 		}
 	}

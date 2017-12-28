@@ -7,16 +7,21 @@
 				</p>
 			</dt>
 			<dd v-for="item in datas">
-				<div class="img_container">
-					<img :src="item.picUrl" />
-					<div class="msg">
-						<i></i>
-						{{item.accessnum|formatNum}}
+				<div class="item_container">
+					<div class="img_container">
+						<img :src="item.picUrl" />
+						<div :class="item.accessnum?`msg`:``">
+							<i></i>
+							<em v-if="item.accessnum">{{item.accessnum|formatNum}}</em>
+						</div>
+						<div class="play_icon">
+							<i></i>
+						</div>
 					</div>
+					<p class="desc_container">{{item.songListDesc || item.Ftitle}}</p>
+					<p class="author_container">{{item.songListAuthor}}</p>
+					<!-- {{item.id}} -->
 				</div>
-				{{item.id}}
-				{{item.songListDesc}}
-				{{item.songListAuthor}}
 			</dd>
 		</dl>
 	</div>
