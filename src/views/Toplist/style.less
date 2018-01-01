@@ -1,0 +1,49 @@
+.toplist_box{
+	padding: 10px;
+
+	ul{
+		li{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			width: 100%;
+			margin: 10px 0;
+			img{
+				display: block;
+				width: 100px;
+				height: 100px;
+			}
+
+			.cont_container{
+				flex: 1;
+				background-color: #fff;
+				dt, dd{
+					padding: 0 15px;
+					
+					.title{
+						font-size: 16px;
+						margin-bottom: 5px;
+					}
+
+					.cont{
+						font-size: 14px;
+						color: rgba(0,0,0,.5);
+						box-sizing: border-box;
+						width: 100%;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						overflow: hidden;
+						span{
+							padding: 5px;
+							color: #000;
+
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
