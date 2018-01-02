@@ -10,18 +10,21 @@
 			display: flex;
 			width: 100%;
 			margin: 10px 0;
-			img{
-				display: block;
+			.img_cotainer{
 				width: 100px;
 				height: 100px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
 			}
 
 			.cont_container{
 				flex: 1;
 				background-color: #fff;
+				max-width: -webkit-calc(~"100% - 100px");
 				dt, dd{
 					padding: 0 15px;
-					
 					.title{
 						font-size: 16px;
 						margin-bottom: 5px;

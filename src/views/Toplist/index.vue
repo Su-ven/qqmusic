@@ -4,7 +4,9 @@
 			<li v-for="item in dataList">
 				<!-- {{item.id}} -->
 				<!-- {{item.listenCount}} -->
-				<img :src="item.picUrl" alt="">
+				<div class="img_cotainer">
+					<img :src="item.picUrl" alt="">
+				</div>
 
 				<dl v-if="item.songList.length" class="cont_container">
 					<dt class="title">{{item.topTitle}}</dt>
