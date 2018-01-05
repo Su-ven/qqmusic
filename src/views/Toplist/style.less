@@ -13,9 +13,25 @@
 			.img_cotainer{
 				width: 100px;
 				height: 100px;
+				position: relative;
 				img{
 					width: 100%;
 					height: 100%;
+				}
+
+				.listen{
+					display: block;
+					padding-left: 15px;
+			    background: url('https://y.gtimg.cn/mediastyle/mobile/yqq_v5/img/list_sprite.png?max_age=19830212&d=20151105145423') no-repeat;
+			    background-position: 0 -50px;
+			    background-size: 24px 60px;
+					font-size: 12px;
+					color: #fff;
+					opacity: 0.6;
+					position: absolute;
+					line-height: 10px;
+					left: 5px;
+					bottom: 5px;
 				}
 			}
 
@@ -23,18 +39,34 @@
 				flex: 1;
 				background-color: #fff;
 				max-width: -webkit-calc(~"100% - 100px");
-				dt, dd{
+				position: relative;
+				&::after{
+					content: '';
+					display: block;
+					width: 10px;
+					height: 10px;
+					border-top: 1px solid #ddd;
+					border-right: 1px solid #ddd;
+					position: absolute;
+					right: 10px;
+					top: 50%;
+					transform: rotate(45deg) translate(-50%, -50%);
+				}
+				dt{
 					padding: 0 15px;
-					.title{
+					&.title{
 						font-size: 16px;
-						margin-bottom: 5px;
+						margin: 5px;
 					}
-
+				}
+				dd{
+					padding: 0 15px;
 					.cont{
 						font-size: 14px;
 						color: rgba(0,0,0,.5);
 						box-sizing: border-box;
 						width: 100%;
+						margin-bottom: 5px;
 						text-overflow: ellipsis;
 						white-space: nowrap;
 						overflow: hidden;

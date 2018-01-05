@@ -6,6 +6,7 @@
 				<!-- {{item.listenCount}} -->
 				<div class="img_cotainer">
 					<img :src="item.picUrl" alt="">
+					<em class="listen">{{item.listenCount|formatNum}}</em>
 				</div>
 
 				<dl v-if="item.songList.length" class="cont_container">
