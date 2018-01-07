@@ -1,5 +1,5 @@
 <template>
-	<div class="footer">
+	<div class="footer" v-if="!isPageSearch">
 		<p class="list_more"><a href="javascript:;">去客户端发现更多好音乐  &gt;</a></p>
 		<a class="go_pc" href="javascript:;">查看电脑版网页</a>
 		<p class="footer_logo"></p>
@@ -9,7 +9,24 @@
 		</p>
 	</div>
 </template>
-
+<script>
+	export default {
+		data(){
+			return {
+				isPageSearch: false
+			}
+		},
+		watch: {
+			$route: function() {
+				if (this.$route.name == 'Search') {
+					this.isPageSearch = true;
+				}else{
+					this.isPageSearch = false;
+				}
+			}
+		},
+	}
+</script>
 <style scoped>
 	.footer{
 		padding: 20px;

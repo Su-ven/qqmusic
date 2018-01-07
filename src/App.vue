@@ -7,11 +7,14 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
   import MHeader from 'layouts/m_header'
   import MNav from 'layouts/m_nav'
   import MFooter from 'layouts/m_footer'
   export default {
+    created(){
+      console.log(this.$router)
+    },
     components: {
       MHeader,
       MNav,
