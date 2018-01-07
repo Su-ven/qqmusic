@@ -20,6 +20,6 @@ function formatParams(params){
 	paramsArr.map((item, index) => {
 		paramsArr[index] = item.join('=');
 	})
-	paramsArr.join('&');
+	paramsArr = paramsArr.join('&');
 	return paramsArr;
 }

@@ -11,6 +11,11 @@
 	.search_container{
 		padding: 10px;
 		background-color: #f4f4f4;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
 		input{
 			display: block;
 			color: rgba(0,0,0,0.3);
@@ -27,6 +32,17 @@
 			&::-webkit-input-placeholder{
 				color: rgba(0,0,0,0.3);
 			}
+
+			&.active{
+				border-radius: 3px 0 0 3px;
+			}
+			flex: 1;
+		}
+
+		.close_btn{
+			display: inline-block;
+			padding: 10px;
+			border-radius: 0 3px 3px 0;
 		}
 	}
 
