@@ -1,0 +1,46 @@
+.search_list_box{
+	li{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		width: 100%;
+		padding: 10px;
+		background-color: #fff;
+		border-bottom: 1px solid #e5e5e5;
+		&:first-child{
+			border-top: 1px solid #e5e5e5;
+		}
+		.icon_container{
+				width: 40px;
+				height: 40px;
+			.icon{
+				display: block;
+				width: 22px;
+				height: 20px;
+				margin: 0 5px;
+				margin-top: 25px;
+				transform: translateY(-50%);
+		    background-image: url('https://y.gtimg.cn/mediastyle/mobile/yqq_v5/img/search_sprite.png?max_age=19830212&d=20151105145423');
+		    background-repeat: no-repeat;
+		    background-size: 22px 30px;
+		    background-position: 0 0;
+			}
+		}
+
+		.cont_container{
+			flex: 1;
+
+			.songname{
+				font-size: 16px;
+				padding: 5px 0;
+			}
+
+			.singersname{
+				color: #808080;
+				font-size: 12px;
+			}
+		}
+	}
+}
